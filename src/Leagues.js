@@ -13,6 +13,7 @@ console.log({logo});
                     <img class ="card-img-bottom img-fluid" src= {logo.thumbnail} width ="200" height ="200" alt="BigCo Inc. logo"/> 
                 </div>
                 <p >{logo.date}</p>
+                <h1>Can u see me on github?</h1>
             </div>
 
           
