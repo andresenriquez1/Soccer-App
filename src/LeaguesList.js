@@ -18,24 +18,30 @@ const LeaguesList = () =>
 
           const filterLeagues = leagues.filter((leagues)=>
           {
-          // console.log(leagues.competition.includes("GERMANY: Bundesliga"));
-           return leagues.title.includes("Manchester United") || leagues.title.includes("Barcelona")
           
+           return leagues.title.includes("Manchester United") || leagues.title.includes("Barcelona") || leagues.title.includes("Madrid")
            
-
          });
     
       return(
         
-        <div class ="d-grid gap-3 ">
-            {
-           filterLeagues.map((user,i) =>
-    {
-        //console.log(filterLeagues);
-        return <Leagues key={i} logo ={filterLeagues[i]} />
-    })
-}
-        </div>
+        
+          <div class ="d-flex flex-row flex-nowrap">
+          
+          
+                {
+                    filterLeagues.map((user,i) =>
+                {
+                    
+                    return  <Leagues  key={i} logo ={filterLeagues[i]} />
+                })
+                    
+            }
+ 
+          </div>
+
+  
+        
     
 );
 }
