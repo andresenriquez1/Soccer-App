@@ -3,13 +3,17 @@ import './Leagues.css'
 const Leagues = ({logo}) =>
 {
     
-    return (
-                    
-                        <div class="card card-body">
-                                <h3 class="card-title "> {logo.title}</h3>
-                                <img class ="card-img-bottom img-fluid" src= {logo.thumbnail} width ="200" height ="200" alt="BigCo Inc. logo"/> 
+    return (                   
                                 
-                    </div>
+
+                                <div class= 'col-4 mb-3'> 
+                                    <div class ="card-group h-100"> 
+                                        <div class ="card">
+                                        <h6 class="card-title text-center"> {logo.title}</h6>
+                                        <img class ="card-img-bottom " src= {logo.thumbnail} width ="1000" height ="300" alt="BigCo Inc. logo"/>   
+                                        </div>
+                                    </div>
+                                </div>
                     
 
                         

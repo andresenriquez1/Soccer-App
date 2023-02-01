@@ -20,25 +20,33 @@ const LeaguesList = () =>
           {
           
            return leagues.title.includes("Manchester United") || leagues.title.includes("Barcelona") || leagues.title.includes("Madrid")
-           
          });
     
       return(
         
-        
-          <div class ="d-flex flex-row flex-nowrap">
+      
+
+       
+        <div class ="container"> 
+        <div class = "row"> 
           
           
                 {
                     filterLeagues.map((user,i) =>
                 {
                     
-                    return  <Leagues  key={i} logo ={filterLeagues[i]} />
+                    return < Leagues  key={i} logo ={filterLeagues[i]} />
+                  
+                
+                        
+                        
                 })
                     
             }
- 
+            </div>
+       
           </div>
+          
 
   
         
