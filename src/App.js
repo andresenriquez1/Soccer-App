@@ -8,12 +8,26 @@ import { useState} from 'react';
 function App() {
 
 const [searchField,setSearchField] = useState('');
+const [Date,setDate] = useState({
+  options: 
+  [
+    {value: "Relevance", label: 'Relevance'},
+    {value: "Oldest", label: 'Oldest'},
+    {value: "Newest", label: 'Newest'}
+  ]
+});
+
 const onSearch = (event) =>
 {
  
   setSearchField(event.target.value);
   
+}
 
+const onCLick= (selectedOptions)=>
+{
+  
+  setDate(selectedOptions)
 }
 
   return (
@@ -22,10 +36,10 @@ const onSearch = (event) =>
      
         
       <Navbar/>
-       <SearchBar input = {onSearch} />
+       <SearchBar input = {onSearch} defaultDate= {Date} updateDate = {onCLick} />
+      
       <Scroll > 
-
-        <LeaguesList filterInput = {searchField}/>
+      <LeaguesList filterInput = {searchField} filterbyDate = {Date}/>
       </Scroll>
       {/* <Footer/>  next step */} 
       
