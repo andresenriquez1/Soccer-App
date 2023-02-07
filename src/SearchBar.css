@@ -1,0 +1,15 @@
+.search
+{
+    margin: 10px;
+    color: transparent;
+   
+    
+}
+input.myDivClass {
+    background-color:rgb(236, 235, 235);
+  }
+
+  input.myDivClass::placeholder
+  {
+    color:black;
+  }

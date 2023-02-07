@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Leagues from './Leagues';
-const LeaguesList = () =>
+const LeaguesList = ({filterInput}) =>
 {
     const [leagues,setLeagues]= useState([]);
 
-  
+    console.log({leagues});
+
     useEffect(
         ()=>
         {
@@ -18,24 +19,36 @@ const LeaguesList = () =>
 
           const filterLeagues = leagues.filter((leagues)=>
           {
-          
-           return leagues.title.includes("Manchester United") || leagues.title.includes("Barcelona") || leagues.title.includes("Madrid")
+            if( filterInput.length <= 0)
+            {
+              return leagues.title.includes("Manchester United") || leagues.title.includes("Barcelona") || leagues.title.includes("Madrid")
+
+            }
+            else
+            {
+              return leagues.title.toLowerCase().includes(filterInput.toLowerCase());
+            }
+              
+
+            
          });
+        
     
       return(
         
-      
-
-       
         <div class ="container"> 
         <div class = "row"> 
           
           
                 {
+                  
+                    
                     filterLeagues.map((user,i) =>
                 {
+                  
                     
                     return < Leagues  key={i} logo ={filterLeagues[i]} />
+                  
                   
                 
                         
