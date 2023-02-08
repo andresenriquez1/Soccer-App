@@ -10,7 +10,8 @@ const Leagues = ({logo}) =>
                                     <div class ="card-group h-100"> 
                                         <div class ="card">
                                         <h6 class="card-title text-center"> {logo.title}</h6>
-                                        <img class ="card-img-bottom " src= {logo.thumbnail} width ="1000" height ="300" alt="BigCo Inc. logo"/>   
+                                        <img class ="card-img-bottom " src= {logo.thumbnail} width ="1000" height ="300" alt="BigCo Inc. logo"/>  
+                                        <h6> {logo.date}</h6> 
                                         </div>
                                     </div>
                                 </div>
