@@ -29,7 +29,7 @@ const SearchBar = ({input, defaultDate,updateDate }) =>
                 
                 options= {defaultDate.options}
                 onChange = {updateDate }
-                showNewOptionAtTop={false}/>
+                showNewOptionAtTop={true}/>
             
                 
                     

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Leagues from './Leagues';
-const LeaguesList = ({filterInput}) =>
+const LeaguesList = ({filterInput,filterbyDate}) =>
 {
     const [leagues,setLeagues]= useState([]);
 
-    console.log({leagues});
+    console.log({filterbyDate});
 
     useEffect(
         ()=>
@@ -19,6 +19,7 @@ const LeaguesList = ({filterInput}) =>
 
           const filterLeagues = leagues.filter((leagues)=>
           {
+            
             if( filterInput.length <= 0)
             {
               return leagues.title.includes("Manchester United") || leagues.title.includes("Barcelona") || leagues.title.includes("Madrid")
@@ -45,9 +46,21 @@ const LeaguesList = ({filterInput}) =>
                     
                     filterLeagues.map((user,i) =>
                 {
-                  
-                    
+                  if(filterbyDate.value == 'Oldest')
+                  {
+                    let index =filterLeagues.length-1-i;
+                    console.log(filterLeagues.length-1-i);
+                    console.log(filterLeagues[index]);
+                    return < Leagues key={filterLeagues[index]} logo ={filterLeagues[index]} />
+                  }
+                  else
+                  {
+                    console.log(filterLeagues[i])
                     return < Leagues  key={i} logo ={filterLeagues[i]} />
+                    
+                  }
+                
+                  
                   
                   
                 
