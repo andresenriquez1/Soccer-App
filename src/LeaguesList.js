@@ -48,14 +48,12 @@ const LeaguesList = ({filterInput,filterbyDate}) =>
                 {
                   if(filterbyDate.value == 'Oldest')
                   {
-                    let index =filterLeagues.length-1-i;
-                    console.log(filterLeagues.length-1-i);
-                    console.log(filterLeagues[index]);
+                    let index =filterLeagues.length-1-i; //points to the end of array where the oldest games are stored
                     return < Leagues key={filterLeagues[index]} logo ={filterLeagues[index]} />
                   }
                   else
                   {
-                    console.log(filterLeagues[i])
+                    
                     return < Leagues  key={i} logo ={filterLeagues[i]} />
                     
                   }
