@@ -6,7 +6,7 @@ const Leagues = ({logo}) =>
     return (                   
                                 
 
-                                <div class= 'col-4 mb-3'> 
+                                <div class= ' col-6 col-md-4 mb-3'> 
                                     <div class ="card-group h-100"> 
                                         <div class ="card">
                                         <h6 class="card-title text-center"> {logo.title}</h6>
