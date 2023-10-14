@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import { HiOutlineUserCircle} from "react-icons/hi2";
+import { Link} from "react-router-dom";
 
 const Navbar = () =>
 {
@@ -13,17 +14,18 @@ const Navbar = () =>
              
               <h1 class ="d-flex justify-item-center col-4 title text-center mt-4"> Soccer City</h1>
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <Link to ="/Login" class="nav-link active" href="#">
 
                 <button class ='button1'>
                 
                 <HiOutlineUserCircle size ={27}class = 'icon'/>
                     Login
             </button>
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"> <button class ='button1'> Create Account</button></a>
+             
+                <Link to ="/SignUp" class="nav-link" href="#"> <button class ='button1'> Create Account</button></Link>
               </li>
              
             </ul>

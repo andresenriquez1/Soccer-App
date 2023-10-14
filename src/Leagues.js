@@ -3,6 +3,18 @@ import './Leagues.css'
 const Leagues = ({logo}) =>
 {
     
+
+const fixDate = (Inputdate) =>
+{
+    const date = new Date(Inputdate);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; 
+    const day = date.getDate();
+
+ return `${month}/${day}/${year}`;
+
+}
+    
     return (                   
                                 
 
@@ -11,7 +23,7 @@ const Leagues = ({logo}) =>
                                         <div class ="card">
                                         <h6 class="card-title text-center"> {logo.title}</h6>
                                         <img class ="card-img-bottom " src= {logo.thumbnail} width ="1000" height ="300" alt="BigCo Inc. logo"/>  
-                                        <h6> {logo.date}</h6> 
+                                        <h6 className ="text-center mt-2"> {fixDate(logo.date)}</h6> 
                                         </div>
                                     </div>
                                 </div>
